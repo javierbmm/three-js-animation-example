@@ -2,9 +2,14 @@
 <head>
     <title>AR.js Basic Projected Camera Example</title>
     <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
-    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
+    <script src="https://raw.githack.com/jeromeetienne/AR.js/master/aframe/build/aframe-ar.min.js"></script>
+    <script src="https://raw.githack.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
+    <script>
+        THREEx.ArToolkitContext.baseURL = 'https://raw.githack.com/jeromeetienne/ar.js/master/three.js/'
+    </script>
     <!-- Look-at component. We don't need this now, but we will later. -->
     <script src="https://unpkg.com/aframe-look-at-component@0.8.0/dist/aframe-look-at-component.min.js"></script>
+
 </head>
 <body>
 <a-scene
@@ -12,7 +17,8 @@
         arjs='sourceType: webcam; videoTexture: true; debugUIEnabled: false;'
         renderer='antialias: true; alpha: true'>
     <a-camera gps-projected-camera rotation-reader></a-camera>
-    <a-box gps-projected-entity-place='latitude: 41.444008872329405; longitude: 2.177232403735117' material='color: red' scale='1 1 1'></a-box>
+    <a-entity fbx-model="../resources/pixel53.fbx" rotation="0 180 0" scale="0.15 0.15 0.15"
+              gps-entity-place="longitude: 12.489820; latitude: 41.892590;" animation-mixer/>
 </a-scene>
 </body>
 </html>
