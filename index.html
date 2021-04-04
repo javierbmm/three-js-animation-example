@@ -4,7 +4,7 @@
 		<title>three.js webgl - FBX loader</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
-		<link type="text/css" rel="stylesheet" href="../css/main.css">
+		<link type="text/css" rel="stylesheet" href="css/main.css">
 	</head>
 
 	<body>
@@ -15,12 +15,12 @@
 
 		<script type="module">
 
-			import * as THREE from '../src/three.module.js';
+			import * as THREE from './src/three.module.js';
 
-			import Stats from '../src/jsm/libs/stats.module.js';
+			import Stats from './src/jsm/libs/stats.module.d.ts';
 
-			import { OrbitControls } from '../src/jsm/controls/OrbitControls.js';
-			import { FBXLoader } from '../src/jsm/loaders/FBXLoader.js';
+			import { OrbitControls } from './src/jsm/controls/OrbitControls.d.ts';
+			import { FBXLoader } from './src/jsm/loaders/FBXLoader.d.ts';
 
 			let camera, scene, renderer, stats;
 
