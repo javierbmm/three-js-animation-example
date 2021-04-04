@@ -14,12 +14,12 @@
 <body>
 <a-scene
         vr-mode-ui="enabled: false"
-        arjs='sourceType: webcam; videoTexture: true; debugUIEnabled: false;'
+        arjs='sourceType: webcam; videoTexture: false; debugUIEnabled: false;'
         renderer='antialias: true; alpha: true'>
     <!-- LOCATION: Via Julio subway entrance -->
     <!-- CAMERA -->
     <a-camera id='camera1' look-controls-enabled='false' arjs-look-controls='smoothingFactor: 0.1'
-              gps-camera='gpsMinDistance: 5' rotation-reader></a-camera>
+              gps-camera='gpsMinDistance: 0.01;gpsMaxDistance: 0.01' rotation-reader></a-camera>
     <!-- MOJON -->
     <a-entity gltf-model="url(../resources/pixel53.gltf)"
               gps-entity-place="latitude: 41.44383119602946; longitude: 2.1786380650626427;" scale="3 3 3"
