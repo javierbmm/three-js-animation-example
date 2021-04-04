@@ -17,8 +17,10 @@
         arjs='sourceType: webcam; videoTexture: true; debugUIEnabled: false;'
         renderer='antialias: true; alpha: true'>
     <a-camera gps-projected-camera rotation-reader></a-camera>
-    <a-entity gltf-model="url(../resources/pixel53.gltf)" scale="2 2 2"
+    <a-entity gltf-model="url(../resources/pixel53.gltf)"
               gps-entity-place="latitude: 41.44383119602946; longitude: 2.1786380650626427;" scale="3 3 3" animation-mixer></a-entity>
+    <a-entity gltf-model="url(../resources/botellas.gltf)" scale="2 2 2"
+              gps-entity-place="latitude: 41.44383119602946; longitude: 2.1786380650626427;"  animation-mixer></a-entity>
     <a-box gps-projected-entity-place='latitude: 41.44383119602946; longitude: 2.1786380650626427;' material='color: red' scale='1 1 1'></a-box>
 </a-scene>
 </body>
