@@ -4,25 +4,26 @@
     <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
     <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
     <script src="https://raw.githack.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
-
 </head>
 <body>
 <a-scene
         vr-mode-ui="enabled: false"
-        arjs='sourceType: webcam; videoTexture: false; debugUIEnabled: false;'
+        arjs='videoTexture: false; sourceType: webcam; debugUIEnabled: false;'
         renderer='antialias: true; alpha: true'>
     <!-- LOCATION: Via Julia subway entrance 41.44382223286105, 2.1786358582316727 -->
     <!-- LOCATION: home 41.443982068027694, 2.1772284848031376 -->
-
-    <!-- BOTELLAS -->
-    <a-entity gltf-model="url(../resources/botellas.gltf)" scale="1 1 1"
-              gps-entity-place="latitude: 41.44382223286105; longitude: 2.1786358582316727;" animation-mixer></a-entity>
-    <!-- DEBUGGING BOX -->
-    <a-box gps-entity-place='latitude: 41.44382223286105; longitude: 2.1786358582316727;'
-           material='color: red' scale='10 10 10'></a-box>
-
+    <!-- LOCATION: Pl cat 41.38748069774713, 2.1697816350535204 -->
     <!-- CAMERA -->
-    <a-camera gps-camera rotation-reader></a-camera>
+    <a-camera id='camera1' near="0.1" far="5000" fov="800"
+              gps-camera='maxDistance: 10'
+              rotation-reader vertical-controls wasd-controls="acceleration: 1300">
+    </a-camera>
+    <!-- BOTELLAS -->
+    <a-entity gltf-model="url(../resources/botellas.gltf)" scale="0.1 0.1 0.1"
+              gps-entity-place="latitude: 41.44382; longitude: 2.1786;" animation-mixer position="0 0 0"></a-entity>
+    <!-- DEBUGGING BOX -->
+    <a-box gps-entity-place="latitude: 41.4439; longitude: 2.17722;"
+           material='color: red' scale='1 1 1'/>
 </a-scene>
 </body>
 <script>
